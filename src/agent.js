@@ -3,7 +3,8 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'https://conduit.productionready.io/api';
+// const API_ROOT = 'https://conduit.productionready.io/api';
+const API_ROOT = 'http://127.0.0.1:3000/api'; // 浏览器以 127.0.0.1:4100 访问， localhost:4100 访问出现 401
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;

@@ -1,0 +1,40 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+	"compounds": [
+		{
+			"name": "🚀 Launch",
+			"configurations": ["Launch App", "Launch Chrome"]
+		}
+	],
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch App",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+            "args": [
+                "start"
+            ],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "env": {
+                "PORT": "4100",
+                "BROWSER": "none", // 不自启动浏览器
+                "HOST": "127.0.0.1" // 启动浏览器 HOST
+            }
+        },
+		{
+			"name": "Launch Chrome",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://127.0.0.1:4100",
+			"webRoot": "${workspaceRoot}",
+			"sourceMaps": true
+		}
+    ]
+}
